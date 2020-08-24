@@ -99,6 +99,18 @@ export default function(hljs) {
     aliases: ['js', 'jsx', 'mjs', 'cjs'],
     keywords: KEYWORDS,
     contains: [
+      {
+        className: 'operators',
+        begin: /\=|\^|\<|\>|\+|\-|\*|\?|\:/
+      },
+      {
+        className: 'brackets',
+        begin: /\(|\)|\[|\]|\{|\}/
+      },
+      {
+        className: 'punctuation',
+        begin: /\.|\,|\;/
+      },
       hljs.SHEBANG({
         binary: "node",
         relevance: 5
